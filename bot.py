@@ -75,4 +75,4 @@ if __name__ == "__main__":
     app.add_handler(CommandHandler("reset", reset))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
     print("Paulina esta en linea...")
-    app.run_polling()
+    app.run_polling(connect_timeout=30, read_timeout=30)
